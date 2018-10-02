@@ -1,4 +1,10 @@
 class PostsController < ApplicationController
+
+	# Restrict access to all pages except home and show.
+	# Unauthenticated users will not be able to create/edit/delete
+	# This is just a basic example and full authtication should be implemented for any real application
+	http_basic_authenticate_with name: "Mike", password:"1234", except: [:index, :show]
+
 	def index
 		@posts = Post.all
 

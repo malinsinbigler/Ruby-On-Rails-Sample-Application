@@ -1,4 +1,9 @@
 class CommentsController < ApplicationController
+
+	# Restrict access to deleting comments.
+	# This is just a basic example and full authtication should be implemented for any real application
+	http_basic_authenticate_with name: "Mike", password:"1234", only: [:destroy, :create]
+
 	def create
 		#obtain this post
 		@post = Post.find(params[:post_id])
