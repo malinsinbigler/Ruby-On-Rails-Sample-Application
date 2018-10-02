@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   #resource route
   #you can view all endpoints by doing 'rake routes'
-  resources :posts
+  resources :posts do
+  	# nested resource
+  	# URL will look like /post/1/comments/
+  	resources :comments
+  end
 
 end

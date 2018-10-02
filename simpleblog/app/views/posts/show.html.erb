@@ -11,3 +11,25 @@
 	data: {confirm: 'Delete this post?'},
 	class: 'btn btn-danger'
 %>
+
+<hr>
+
+
+<%= render 'comments/comments' %>
+
+<h3>Add Comment</h3>
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+	<!-- We should have authentication that defines this user's session instead of a form field -->
+	<p>
+		<%= f.label :username %><br>
+		<%= f.text_field(:username, {class: 'form-control'}) %><br>
+	</p>
+	<p>
+		<%= f.label :body %><br>
+		<%= f.text_field(:body, {class: 'form-control'}) %><br>
+	</p>
+	<p>
+		<%= f.submit({class: 'btn btn-primary'}) %><br>
+	</p>
+<% end %>
