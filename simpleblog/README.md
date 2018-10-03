@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was a good introduction to a basic CRUD application utilizing the Ruby On Rails framework.
 
-Things you may want to cover:
 
-* Ruby version
+Some areas of interest that will be researched in a future tutorial will be:
 
-* System dependencies
+* Actual user authentication
+* Routing - rails seems to implicitly resolve many routes based on name. How can more complex routes, like an API, be set up?
+* Active Record
+* Action View
+* Integration of a front-end JS framework such as Vue
+* Additional steps to the build workflow (Webpack, etc...)
+* Making and distributing custom gems
 
-* Configuration
 
-* Database creation
+Proposed follow-on tutorial - https://www.railstutorial.org/book
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
